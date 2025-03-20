@@ -1,0 +1,18 @@
+@model CrudDotNet.Models.Categorie
+
+<h1>Modifier une Categorie</h1>
+
+<form asp-action="Modifier">
+    <input type="hidden" asp-for="id_categorie" />
+
+    <div class="form-group">
+        <label for="nom">Nom de la categorie</label>
+        <input asp-for="nom_categorie" class="form-control" />
+        <span asp-validation-for="nom_categorie" class="text-danger"></span>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-success">Enregistrer les modifications</button>
+    <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+</form>

@@ -1,0 +1,10 @@
+@model CrudDotNet.Models.Categorie
+
+<h1>Créer une Categorie</h1>
+
+<form asp-action="Creer">
+    <div class="form-group">
+        <label>Nom de label categorie:</label>
+        <input asp-for="nom_categorie" class="form-control" />
+    <button type="submit" class="btn btn-primary">Créer</button>
+</form>

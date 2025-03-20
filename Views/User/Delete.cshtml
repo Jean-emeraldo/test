@@ -1,0 +1,10 @@
+@model CrudDotNet.Models.User
+
+<h2>Supprimer l'utilisateur</h2>
+
+<p>Êtes-vous sûr de vouloir supprimer l'utilisateur @Model.Name ?</p>
+
+<form method="post">
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Annuler</a>
+</form>

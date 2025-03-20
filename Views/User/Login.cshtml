@@ -1,0 +1,20 @@
+@model CrudDotNet.Models.User
+
+<h2>Connexion</h2>
+
+@if (ViewBag.Erreur != null)
+{
+    <div class="text-danger">@ViewBag.Erreur</div>
+}
+
+<form asp-action="Login" method="post">
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Mot de passe</label>
+        <input asp-for="Password" class="form-control" type="password" />
+    </div>
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+</form>

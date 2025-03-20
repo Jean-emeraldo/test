@@ -1,0 +1,26 @@
+@model IEnumerable<CrudDotNet.Models.Categorie>
+
+<h1>Liste des Categories</h1>
+
+<a asp-action="Creer" class="btn btn-primary">Ajouter une categorie</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var categorie in Model)
+        {
+            <tr>
+                <td>@categorie.nom_categorie</td>
+                <td>
+                    <a asp-action="Modifier" asp-route-id="@categorie.id_categorie" class="btn btn-primary">Modifier</a> |
+                    <a asp-action="Supprimer" asp-route-id="@categorie.id_categorie" class="btn btn-danger">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

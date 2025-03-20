@@ -1,0 +1,24 @@
+@model CrudDotNet.Models.Produit
+
+<h1>Modifier le Produit</h1>
+
+<form asp-action="Modifier">
+    <input type="hidden" asp-for="id_produit" />
+
+    <div class="form-group">
+        <label for="nom_produit">Nom</label>
+        <input asp-for="nom_produit" class="form-control" />
+        <span asp-validation-for="nom_produit" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="id_cat">Catégorie</label>
+        <select asp-for="id_cat" asp-items="ViewBag.Categories" class="form-control">
+            <option value="">-- Sélectionner une catégorie --</option>
+        </select>
+        <span asp-validation-for="id_cat" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enregistrer</button>
+    <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+</form>
